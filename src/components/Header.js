@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./Header.css";
 
 class Header extends React.Component {
@@ -8,7 +7,7 @@ class Header extends React.Component {
 			<div className="Header">
 				<header className="App-header">
 					<h1>Employee Directory</h1>
-					<p>Here are the list of the employees we have</p>
+					<p>"Where you go to find your Employees using the power of React!"</p>
 				</header>
 			</div>
 		);

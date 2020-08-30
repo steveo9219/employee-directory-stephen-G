@@ -1,8 +1,9 @@
 import React from "react";
-import "./App.css";
 import Header from "./components/Header";
-import Employee from "./components/Employee";
-import TableRowNames from "./components/TableRowNames";
+import EmployeeTable from "./components/EmployeeTable";
+import searchText from "./App.js";
+
+import "materialize-css/dist/css/materialize.min.css";
 
 class App extends React.Component {
 	state = {
@@ -55,14 +56,22 @@ class App extends React.Component {
 		return (
 			<div className="App">
 				<Header />
-				<input type="text" onChange={this.handleChange}></input>
-				<TableRowNames />
+				<p className={searchText}>
+					Please use the search box <strong>below</strong> to find a name you
+					would like to look up. Then delete your text to look up a different
+					person! No need to use a search button with the power of React!
+				</p>
+				<input
+					placeholder={"Type Employee's Name Here"}
+					type="text"
+					onChange={this.handleChange}
+				></input>
 				{this.state.filteredEmployees.length > 0
 					? this.state.filteredEmployees.map((employee) => {
-							return <Employee person={employee} />;
+							return <EmployeeTable person={employee} />;
 					  })
 					: this.state.employees.map((employee) => {
-							return <Employee person={employee} />;
+							return <EmployeeTable person={employee} />;
 					  })}
 			</div>
 		);
