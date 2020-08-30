@@ -56,7 +56,7 @@ class App extends React.Component {
 		return (
 			<div className="App">
 				<Header />
-				<p className={searchText}>
+				<p>
 					Please use the search box <strong>below</strong> to find a name you
 					would like to look up. Then delete your text to look up a different
 					person! No need to use a search button with the power of React!
