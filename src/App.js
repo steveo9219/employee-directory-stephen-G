@@ -13,24 +13,33 @@ class App extends React.Component {
 	};
 
 	async componentDidMount() {
-		const url = "https://api.randomuser.me/?results=5";
+		const url = "https://randomuser.me/api/?results=20&nat=us";
 		const response = await fetch(url);
 		const data = await response.json();
 		this.setState({ employees: data.results, loaded: true });
 	}
 
 	handleChange = (e) => {
-		this.setState({
-			inputValue: e.target.value,
-		});
-		console.log(e.target.value);
+		this.setState(
+			{
+				filteredEmployees: [],
+				inputValue: e.target.value,
+			},
+			(e) => this.filterEmployees(e)
+		);
 	};
 
-	handleClick = (e) => {
+	filterEmployees = (e) => {
+		if (this.state.inputValue === "") {
+			this.setState({ filteredEmployees: [] });
+			return;
+		}
 		this.state.employees.forEach((employee) => {
-			console.log(employee);
-			if (employee.name.first.includes(this.state.inputValue)) {
-				console.log("working");
+			if (
+				employee.name.first
+					.toLowerCase()
+					.includes(this.state.inputValue.toLowerCase())
+			) {
 				this.setState({
 					filteredEmployees: [...this.state.filteredEmployees, employee],
 					inputValue: "",
@@ -47,7 +56,6 @@ class App extends React.Component {
 			<div className="App">
 				<Header />
 				<input type="text" onChange={this.handleChange}></input>
-				<button onClick={this.handleClick}>Search</button>
 				<TableRowNames />
 				{this.state.filteredEmployees.length > 0
 					? this.state.filteredEmployees.map((employee) => {
