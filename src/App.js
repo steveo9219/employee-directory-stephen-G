@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
 import EmployeeTable from "./components/EmployeeTable";
-import searchText from "./App.js";
 
 import "materialize-css/dist/css/materialize.min.css";
 
