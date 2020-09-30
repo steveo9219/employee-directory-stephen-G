@@ -25,7 +25,7 @@ For this assignment, I created an employee directory with React. I broke up my a
 
 Link to GitHub Repo - [Employee Directory GitHub Repo](https://github.com/steveo9219/employee-directory-stephen-G)
 
-Link to deployed application on Github Pages - [Employee Directory Web Application Deployed on Github Pages](https://steveo9219.github.io/employee-directory-stephen-G/.)
+Link to deployed application on Heroku - [Employee Directory Web Application Deployed on Github Pages](https://employee-directory-stephen-g.herokuapp.com/)
 
 ---
 
