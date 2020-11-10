@@ -17,33 +17,38 @@
 
 ## Description
 
-For this assignment, I created an employee directory with React. I broke up my application's UI into components, manage component state, and respond to user events.
+For this assignment, a budgeting app was built to keep track of personal finances. IndexedDB, cache API, and Service Workers to provide an offline experience for the application was used
 
 ---
 
 ## Links for Live Application Demo
 
-Link to GitHub Repo - [Employee Directory GitHub Repo](https://github.com/steveo9219/employee-directory-stephen-G)
+Link to GitHub Repo - [Employee Directory GitHub Repo](https://github.com/steveo9219/progressive-budget-app-stephen-G)
 
-Link to deployed application on Heroku - [Employee Directory Web Application Deployed on Github Pages](https://employee-directory-stephen-g.herokuapp.com/)
+Link to deployed application on Heroku - [Employee Directory Web Application Deployed on Heroku](https://progressive-web-app-sg.herokuapp.com/)
+(please be patient with Heroku, it takes a while for Heroku to "spin up" my webpage)
 
 ---
 
-## Assignment Scope
-
 ### User Story
 
-- As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
+- As a user, I would like to make an app run as efficiently as possible!
+
+---
 
 ### Acceptance Criteria
 
-Given a table of random users, when the user loads the page, a table of employees should render.
+- Identify performance bottlenecks in web applications.
 
-The user should be able to:
+- Explain how performance can be measured in web applications.
 
-- Sort the table by at least one category
+- Explain the 5 main categories measured in a Lighthouse audit.
 
-- Filter the users by at least one property.
+- Optimize CSS, JS, and media assets for performance.
+
+- Set up webpack in a new front end project.
+
+- Convert an existing web application to a PWA and add offline functionality.
 
 ---
 
